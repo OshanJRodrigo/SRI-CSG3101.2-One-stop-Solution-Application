@@ -160,3 +160,11 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Datasets
+# Avoid tracking following dataset files due to their large filesize than the capacity in GitHub.
+Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.csv
+Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.json
+Best Employees Recommendation System/Datasets/yelp_academic_dataset_businessCat_busid_overallstars.csv
+Best Employees Recommendation System/Datasets/yelp_academic_dataset_businessCatSplit_busid_overallstars.csv
+Best Employees Recommendation System/Datasets/yelp_academic_dataset_businessid_to_name_stars_numreviews.csv
