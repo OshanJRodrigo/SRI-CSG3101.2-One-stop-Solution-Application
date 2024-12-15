@@ -165,6 +165,3 @@ cython_debug/
 # Avoid tracking following dataset files due to their large filesize than the capacity in GitHub.
 Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.csv
 Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.json
-Best Employees Recommendation System/Datasets/yelp_academic_dataset_businessCat_busid_overallstars.csv
-Best Employees Recommendation System/Datasets/yelp_academic_dataset_businessCatSplit_busid_overallstars.csv
-Best Employees Recommendation System/Datasets/yelp_academic_dataset_businessid_to_name_stars_numreviews.csv
