@@ -4,7 +4,7 @@ import heapq
 from collections import defaultdict
 from operator import itemgetter
         
-testBusinessCategory = 'Food'
+testBusinessCategory = 'Electronics Repair'
 k = 10
 
 ml = Yelp()
@@ -42,7 +42,7 @@ for BusinessInnerID, rating in kNeighbors:
 
 print(f"\n\nCustomer Selected Service Category: {testBusinessCategory}")
 
-print(f"\nTop 5 recommended employees for the selected service category;\n")
+print("\nTop 5 recommended employees for the selected service category;\n")
     
 # Get top-rated items from similar users:
 pos = 0
