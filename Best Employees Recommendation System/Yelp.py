@@ -16,8 +16,8 @@ class Yelp:
     businessID_to_numReviews = {}
     businessID_to_overallRating = {}
     businessID_to_availability = {}
-    mainDatasetPath = 'Datasets/ratings_with_splitted_bCategories.csv'
-    businessNamesNumReviewsPath = 'Datasets/business.csv'
+    mainDatasetPath = 'Datasets/Reduced_ratings_with_splitted_bCategories.csv'
+    businessNamesNumReviewsPath = 'Datasets/Reduced_business.csv'
     
     def loadYelp(self):
 

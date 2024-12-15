@@ -1,5 +1,5 @@
 import pandas as pd
-import csv  # Required for quoting options
+#import csv  # Required for quoting options
 
 # Read the CSV file
 input_file = "ratings.csv"  # Replace with your input CSV file path
@@ -21,7 +21,7 @@ result_df = result_df[['category'] + [col for col in result_df.columns if col !=
 # Save the transformed DataFrame to a new CSV file
 result_df.to_csv(output_file,
                  index=False,
-                 na_rep="NULL",
-                 quoting=csv.QUOTE_NONNUMERIC) # Quote only non-numeric values)
+                 na_rep="NULL")#,
+                 #quoting=csv.QUOTE_NONNUMERIC) # Quote only non-numeric values)
 
 print(f"Categories splitted successfully")

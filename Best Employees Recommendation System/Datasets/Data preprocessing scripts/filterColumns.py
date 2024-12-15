@@ -1,5 +1,5 @@
 import pandas as pd
-import csv  # Required for quoting options
+#import csv  # Required for quoting options
 
 # Read the CSV file
 input_file = "yelp_academic_dataset_business.csv"  # Replace with your input CSV file path
@@ -17,7 +17,7 @@ df_filtered = df[required_columns]
 # Save the filtered DataFrame to a CSV file
 df_filtered.to_csv(output_file,
                    index=False,
-                   na_rep="NULL",
-                   quoting=csv.QUOTE_NONNUMERIC) # Quote only non-numeric values
+                   na_rep="NULL")#,
+                   #quoting=csv.QUOTE_NONNUMERIC) # Quote only non-numeric values
 
 print("File filtered successfully")
