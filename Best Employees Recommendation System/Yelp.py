@@ -1,13 +1,13 @@
 import os
 import csv
 import sys
-import re
+# import re
 
 from surprise import Dataset
 from surprise import Reader
 
-from collections import defaultdict
-import numpy as np
+# from collections import defaultdict
+# import numpy as np
 
 class Yelp:
     
@@ -15,8 +15,9 @@ class Yelp:
     name_to_businessID = {}
     businessID_to_numReviews = {}
     businessID_to_overallRating = {}
-    mainDatasetPath = 'Datasets/yelp_academic_dataset_businessCatSplit_busid_overallstarsReduced.csv'
-    businessNamesNumReviewsPath = 'Datasets/yelp_academic_dataset_businessid_to_name_stars_numreviewsReduced.csv'
+    businessID_to_availability = {}
+    mainDatasetPath = 'Datasets/ratings_with_splitted_bCategories.csv'
+    businessNamesNumReviewsPath = 'Datasets/business.csv'
     
     def loadYelp(self):
 
@@ -35,14 +36,16 @@ class Yelp:
                 businessNamesNumReviewsReader = csv.reader(csvfile)
                 next(businessNamesNumReviewsReader)  #Skip header line
                 for row in businessNamesNumReviewsReader:
-                    businessID = row[0]
-                    businessName = row[1]
-                    businessOverallRating = float(row[2])
-                    businessNumReviews = int(row[3])
+                    businessID = str(row[0])
+                    businessName = str(row[1])
+                    businessOverallRating = float(row[4])
+                    businessNumReviews = int(row[5])
+                    businessAvailability = bool(row[6])
                     self.businessID_to_name[businessID] = businessName
                     self.name_to_businessID[businessName] = businessID
                     self.businessID_to_overallRating[businessID] = businessOverallRating
                     self.businessID_to_numReviews[businessID] = businessNumReviews
+                    self.businessID_to_availability[businessID] = businessAvailability
 
         return mainDataset
     
@@ -71,5 +74,11 @@ class Yelp:
             return self.businessID_to_numReviews[businessID]
         else:
             return 0
+        
+    def getBusinessAvailabilityStatus(self, businessID):
+        if businessID in self.businessID_to_availability:
+            return self.businessID_to_availability[businessID]
+        else:
+            return False
         
         

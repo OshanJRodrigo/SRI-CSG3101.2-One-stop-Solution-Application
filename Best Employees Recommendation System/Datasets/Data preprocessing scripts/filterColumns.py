@@ -11,7 +11,7 @@ df = pd.read_csv(input_file, low_memory=False) # handle columns with mixed types
 
 # Retain only the specified columns
 #required_columns = ['categories', 'business_id', 'stars']  # 'categories' moved to the beginning
-required_columns = ['business_id', 'name', 'latitude','longitude', 'review_count', 'is_open']
+required_columns = ['business_id', 'name', 'latitude','longitude', 'stars', 'review_count', 'is_open']
 df_filtered = df[required_columns]
 
 # Save the filtered DataFrame to a CSV file
