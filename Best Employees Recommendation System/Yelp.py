@@ -40,7 +40,7 @@ class Yelp:
                     businessName = str(row[1])
                     businessOverallRating = float(row[4])
                     businessNumReviews = int(row[5])
-                    businessAvailability = bool(row[6])
+                    businessAvailability = int(row[6])
                     self.businessID_to_name[businessID] = businessName
                     self.name_to_businessID[businessName] = businessID
                     self.businessID_to_overallRating[businessID] = businessOverallRating
@@ -79,6 +79,6 @@ class Yelp:
         if businessID in self.businessID_to_availability:
             return self.businessID_to_availability[businessID]
         else:
-            return False
+            return 0
         
         

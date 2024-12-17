@@ -18,7 +18,7 @@ sim_options = {'name': 'cosine',
 
 model = KNNBasic(sim_options=sim_options)
 model.fit(trainSet)
-simsMatrix = model.compute_similarities()
+simsMatrix = model.sim #model.compute_similarities()
 
 testBusinessCategoryInnerID = trainSet.to_inner_uid(testBusinessCategory)
 
@@ -49,10 +49,12 @@ pos = 0
 for SimilarBusinessInnerID, ratingSum in sorted(candidates.items(), key=itemgetter(1), reverse=True):
     #if not itemID in watched:
     businessID = trainSet.to_raw_iid(SimilarBusinessInnerID)
-    print(ml.getBusinessName(businessID))#, ratingSum)
-    pos += 1
-    if (pos > 5):
-        break
+    #print(ml.getBusinessAvailabilityStatus(businessID))
+    if ml.getBusinessAvailabilityStatus(businessID): # filtering to get only the currently available or open employees/business
+        print(ml.getBusinessName(businessID))#, ratingSum)
+        pos += 1
+        if (pos > 5):
+            break
 
     
 
