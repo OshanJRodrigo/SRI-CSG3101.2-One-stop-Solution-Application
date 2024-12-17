@@ -1,3 +1,5 @@
+# References: https://www.linkedin.com/learning/building-recommender-systems-with-machine-learning-and-ai
+
 import os
 import csv
 import sys
