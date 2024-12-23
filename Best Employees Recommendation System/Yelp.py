@@ -1,3 +1,5 @@
+# References: https://www.linkedin.com/learning/building-recommender-systems-with-machine-learning-and-ai
+
 import os
 import csv
 import sys
@@ -13,6 +15,7 @@ class Yelp:
     
     businessID_to_name = {}
     name_to_businessID = {}
+    businessID_to_location = {}
     businessID_to_numReviews = {}
     businessID_to_overallRating = {}
     businessID_to_availability = {}
@@ -38,11 +41,13 @@ class Yelp:
                 for row in businessNamesNumReviewsReader:
                     businessID = str(row[0])
                     businessName = str(row[1])
+                    businessLocation = (float(row[2]), float(row[3]))
                     businessOverallRating = float(row[4])
                     businessNumReviews = int(row[5])
-                    businessAvailability = bool(row[6])
+                    businessAvailability = int(row[6])
                     self.businessID_to_name[businessID] = businessName
                     self.name_to_businessID[businessName] = businessID
+                    self.businessID_to_location[businessID] = businessLocation
                     self.businessID_to_overallRating[businessID] = businessOverallRating
                     self.businessID_to_numReviews[businessID] = businessNumReviews
                     self.businessID_to_availability[businessID] = businessAvailability
@@ -57,11 +62,21 @@ class Yelp:
         else:
             return ""
         
-    def getBusinessID(self, businessName):
-        if businessName in self.name_to_businessID:
-            return self.name_to_businessID[businessName]
-        else:
-            return ""
+    # def getBusinessID(self, businessName):
+    #     if businessName in self.name_to_businessID:
+    #         return self.name_to_businessID[businessName]
+    #     else:
+    #         return ""
+        
+    # def getBusinessLocation(self, businessID):
+    #     if businessID in self.businessID_to_location:
+    #         return self.businessID_to_location[businessID]
+    #     else:
+    #         return ()
+        
+    def getAllBusinessesLocations(self):
+        return self.businessID_to_location
+
         
     def getBusinessOverallRating(self, businessID):
         if businessID in self.businessID_to_overallRating:
@@ -79,6 +94,6 @@ class Yelp:
         if businessID in self.businessID_to_availability:
             return self.businessID_to_availability[businessID]
         else:
-            return False
+            return 0
         
         
