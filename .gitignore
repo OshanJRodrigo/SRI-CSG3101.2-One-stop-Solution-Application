@@ -161,7 +161,3 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Datasets
-# Avoid tracking following dataset files due to their large filesize than the capacity in GitHub.
-Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.csv
-Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.json
