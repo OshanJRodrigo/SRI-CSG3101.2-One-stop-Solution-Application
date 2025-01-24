@@ -173,6 +173,7 @@ RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/recsys_model_two_rank
 RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/recsys_model_two_retrieval
 RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/csg3101-service-providing-app-firebase-adminsdk-7xpfw-f39bc603db.json
 
+<<<<<<< HEAD
 Backend/firebase_credentials.json
 
 
@@ -218,3 +219,6 @@ app-example
 
 android/
 Frontend/constants/api.js
+=======
+Backend/firebase_credentials.json
+>>>>>>> parent of 98da1d1 (Merge pull request #7 from OshanJRodrigo/kalana-branch)
