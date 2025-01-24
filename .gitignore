@@ -214,3 +214,7 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+
+
+Frontend\constants\api.js
