@@ -161,7 +161,14 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Datasets
-# Avoid tracking following dataset files due to their large filesize than the capacity in GitHub.
-Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.csv
-Best Employees Recommendation System/Datasets/yelp_academic_dataset_business.json
+RecSys Models/RecSys Model 1/RecSys Model 1 Deployment/recsys_model_one_ranking.zip
+RecSys Models/RecSys Model 1/RecSys Model 1 Deployment/recsys_model_one_retrieval.zip
+RecSys Models/RecSys Model 1/RecSys Model 1 Deployment/app/recsys_model_one_ranking
+RecSys Models/RecSys Model 1/RecSys Model 1 Deployment/app/recsys_model_one_retrieval
+RecSys Models/RecSys Model 1/RecSys Model 1 Deployment/app/csg3101-service-providing-app-firebase-adminsdk-7xpfw-f39bc603db.json
+
+RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/recsys_model_two_ranking.zip
+RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/recsys_model_two_retrieval.zip
+RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/recsys_model_two_ranking
+RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/recsys_model_two_retrieval
+RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/csg3101-service-providing-app-firebase-adminsdk-7xpfw-f39bc603db.json
