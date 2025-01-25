@@ -172,3 +172,5 @@ RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/recsys_model_two_retrieva
 RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/recsys_model_two_ranking
 RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/recsys_model_two_retrieval
 RecSys Models/RecSys Model 2/RecSys Model 2 Deployment/app/csg3101-service-providing-app-firebase-adminsdk-7xpfw-f39bc603db.json
+
+Backend/firebase_credentials.json
